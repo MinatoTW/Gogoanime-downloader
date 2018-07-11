@@ -1,0 +1,5 @@
+requests
+pySmartDL
+clint 
+bs4
+
