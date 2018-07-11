@@ -8,18 +8,18 @@ def download(url,dest):
     obj=SmartDL(url, dest)
     obj.start()
     return
-u=raw_input("Enter URL of first episode> " )
+u=input("Enter URL of first episode> " )
 url=u[:-1]
 try:
     rq=requests.get(url)
     if rq.status_code == 200:
-        f=raw_input("Enter episode to start with> ")
-        l=raw_input("Enter episode to end with> ")
-        n=raw_input("Enter name to be saved as> ")
-        d=raw_input("Enter full path to destination folder")
-        s=raw_input("Switch off when downloaded?(y/n) ")
+        f=input("Enter episode to start with> ")
+        l=input("Enter episode to end with> ")
+        n=input("Enter name to be saved as> ")
+        d=input("Enter full path to destination folder> ")
+        s=input("Switch off when downloaded?(y/n) ")
 except:
-    print "Wrong URL dude"
+    print ("Wrong URL dude")
     sys.exit()
 for i in range(int(f),int(l)+1):
     u=url+str(i)
@@ -37,7 +37,7 @@ for i in range(int(f),int(l)+1):
                 if 'fbcdn' in l3:
                     print(l3)
                     des=d+'/'+n+str(i)+'.mp4'
-                    print des
+                    print (des)
                     download(l3,des)
 if s == "y":
     if os.name == 'nt':
