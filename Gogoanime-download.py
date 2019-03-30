@@ -34,7 +34,7 @@ for i in range(int(f),int(l)+1):
             l1=s1.find_all('a')
             for l2 in l1:
                 l3=l2.get('href')
-                if 'fbcdn' in l3:
+                if 'cdnfile' in l3:
                     print(l3)
                     des=d+'/'+n+str(i)+'.mp4'
                     print (des)
